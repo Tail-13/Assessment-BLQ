@@ -3,10 +3,9 @@
 
 $n = 5;
 function prime_sequence($n){
-    $loop = 0;
-    $num = 0;
+    $num = $j = 0;
     $prime = [];
-    while ($loop != $n){
+    while ($j != $n){
         $factor = 0;
         for($i = 1; $i <= $num; $i++){
             if($num % $i == 0){
@@ -15,7 +14,7 @@ function prime_sequence($n){
         }
         if($factor == 2){
             $prime[] = $num;
-            $loop++;
+            $j++;
         }
         $num++;
     }

@@ -4,18 +4,18 @@
 
 $n = 10;
 function fibonacci($n) {
-    $fibonacci = [];
+    $arr = [];
     for ($i = 0; $i < $n; $i++) {
         if ($i < 2) {
-            $fibonacci[] = $i;
+            $arr[] = $i;
         } else {
-            $fibonacci[] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
+            $arr[] = $arr[$i - 1] + $arr[$i - 2];
         }
     }
 
-    for($i = 0; $i < count($fibonacci); $i++){
-        echo $fibonacci[$i];
-        if($i+1 < count($fibonacci)){
+    for($i = 0; $i < count($arr); $i++){
+        echo $arr[$i];
+        if($i+1 < count($arr)){
             echo ",";
         }
     }

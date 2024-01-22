@@ -13,4 +13,14 @@ Jika diberikan panjang lilin awal masing-masing adalah
 Tentukan lilin mana yang paling pertama habis meleleh.
 */
 
+$candle = [3,3,9,6,7,8,23];
+$candle_out = [1,1,2,3,5,8,13];
+
+while(!in_array(0, $candle)){               // looping array until 1 element reach 0
+    for($i = 0; $i < count($candle); $i++){
+        $candle[$i] -= $candle_out[$i];
+    }
+}
+$first = array_search(0, $candle) + 1;      // search value in array value
+echo "lilin yang pertama mati adalah lilin ke-$first\n";
 ?>
