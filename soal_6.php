@@ -6,17 +6,13 @@ apakah sebuah kata adalah palindrome* atau tidak
 */
 
 function palindrom($str){
-   $len = strlen($str);
-   $strrev = "";
-   for($i = $len - 1; $i <= 0; $i--){
-      $strrev .= $str[$i];
-   }
-   if ($strrev == $str) {
-       $res = "kalimat/kata palindrom!";
-   } else{
-       $res = "kalimat/kata bukan palindrom!";
-   }
-   return $res;
+   $len = strlen($str) - 1;
+   for($i = 0; $i <= $len; $i++){
+        if($str[$i] != $str[$len - $i]){
+            return "$str Bukan Kata Palindrom!";
+        }
+    }
+    return "$str Kata Palindrom";
 }
 echo palindrom('katak') . "\n";
 echo palindrom('12021') . "\n";

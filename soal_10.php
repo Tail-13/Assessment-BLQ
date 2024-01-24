@@ -9,16 +9,9 @@ $string = "Susilo Bambang Yudhoyono";
 
 function word_censor($string){
     $arr = explode(" ", $string);
+    $censor = "***";
     foreach($arr as $data){
-        $len = strlen($data);
-        for($i = 0; $i < $len; $i++){
-            if($i == 0 || $i == $len-1){
-                echo($data[$i]);
-            } else{
-                echo "*";
-            }
-        }
-        echo " ";
+        echo $data[0] . $censor . $data[strlen($data) - 1] . " ";
     }
 }
 word_censor($string);

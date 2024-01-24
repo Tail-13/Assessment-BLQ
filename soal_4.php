@@ -2,7 +2,7 @@
 // Buatlah fungsi untuk menampilkan n bilangan prima pertama
 
 $n = 5;
-function prime_sequence($n){
+function prime($n){
     $num = $j = 0;
     $prime = [];
     while ($j != $n){
@@ -26,6 +26,6 @@ function prime_sequence($n){
     }
 }
 
-prime_sequence($n);
+prime($n);
 
 ?>
